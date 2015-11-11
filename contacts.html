@@ -3,11 +3,12 @@
   <head>
     <title>Контакты</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css' />
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header stripe">
       <div class="container">
         <a href="#" class="logo">
           <img src="images/logo.png" alt="logo" />
@@ -28,62 +29,67 @@
     <main>
       <div class="contacts-header">
         <div class="container">
-          <div class="float-left">
+          <div class="left">
             <h2>Контакты</h2>
             <p>Свяжитесь с нами, и все будет хорошо</p>
           </div>
-          <div class="float-right">
-            <button class="button button-consult">Мне нужна консультация</button>
+          <div class="right">
+            <button class="button">Мне нужна консультация</button>
           </div>
           <div class="clearfix"></div>
         </div>
       </div>
-      <div class="container">
-        <div class="map-contacts"></div>
-        <div class="contacts">
-          <p class="phone">+7 (812) 212 85 06</p>
-          <p class="email">rent@spezteh.ru</p>
-          <p class="order-consult">Заказать консультацию по подобру подходящей техники:</p>
-          <form action="#">
-            <input type="text" name="name" placeholder="Имя" />
-            <input type="text" name="phone" placeholder="Телефон для связи" />
-            <input type="text" name="task" placeholder="Описание задачи (можно примерное)" />
-            <button class="button button-consult">Заказать консультацию</button>
-          </form>
+      <div class="container-contacts">
+        <div class="container">
+          <div id="map-contacts"></div>
+          <div class="contacts">
+            <p class="phone">+7 (812) 212 85 06</p>
+            <p class="email">rent@spezteh.ru</p>
+            <p class="order-consult">Заказать консультацию по подобру подходящей техники:</p>
+            <form action="#">
+              <input type="text" name="name" placeholder="Имя" />
+              <input type="text" name="phone" placeholder="Телефон для связи" />
+              <textarea name="task" placeholder="Описание задачи (можно примерное)"></textarea>
+              <input class="button-consult" type="submit" value="Получить консультацию" />
+            </form>
+          </div>
+          <div class="clearfix"></div>
         </div>
       </div>
       <section class="contacts-reviews">
         <div class="container">
-          <ul>
-            <li>
-              <img src="" alt="Оля Молния" />
+          <h2>Отзывы</h2>
+          <div class="row">
+            <div class="column">
+              <img src="images/reviews-item1.jpg" alt="Оля Молния" />
               <blockquote>
                 <p>Спецтех24 – это надежные партнеры нашей компании, которые всегда выполняют работу быстро и еще у них отличное чувство юмора! Благодарим и рекомендуем.</p>
                 <span>Оля Молния</span>
               </blockquote>
-            </li>
-            <li>
-              <img src="" alt="Оля Молния" />
+            </div>
+            <div class="column">
+              <img src="images/reviews-item2.jpg" alt="Оля Молния" />
               <blockquote>
                 <p>Спецтех24 – это надежные партнеры нашей компании, которые всегда выполняют работу быстро и еще у них отличное чувство юмора! Благодарим и рекомендуем.</p>
                 <span>Оля Молния</span>
               </blockquote>
-            </li>
-            <li>
-              <img src="" alt="Оля Молния" />
+            </div>
+            <div class="column">
+              <img src="images/reviews-item3.jpg" alt="Оля Молния" />
               <blockquote>
                 <p>Спецтех24 – это надежные партнеры нашей компании, которые всегда выполняют работу быстро и еще у них отличное чувство юмора! Благодарим и рекомендуем.</p>
                 <span>Оля Молния</span>
               </blockquote>
-            </li>
-            <li>
-              <img src="" alt="Оля Молния" />
+            </div>
+            <div class="column">
+              <img src="images/reviews-item4.jpg" alt="Оля Молния" />
               <blockquote>
                 <p>Спецтех24 – это надежные партнеры нашей компании, которые всегда выполняют работу быстро и еще у них отличное чувство юмора! Благодарим и рекомендуем.</p>
                 <span>Оля Молния</span>
               </blockquote>
-            </li>
-          </ul>
+            </div>
+            <div class="clearfix"></div>
+          </div>
         </div>
       </section>
     </main>
@@ -105,5 +111,19 @@
       <div class="clearfix"></div>
       </div>
     </footer>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap;
+
+        function init() {
+            myMap = new ymaps.Map("map-contacts", {
+                center: [59.942926, 30.29942],
+                zoom: 15,
+                controls: ["zoomControl"]
+            });
+            myMap.behaviors.disable('scrollZoom');
+        }
+    </script>
   </body>
 </html>

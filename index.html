@@ -3,11 +3,12 @@
   <head>
     <title>Спецтех24</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css' />
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header stripe">
       <div class="container">
         <a href="#" class="logo">
           <img src="images/logo.png" alt="logo" />
@@ -26,21 +27,32 @@
       </div>
     </header>
     <main>
-      <article class="promo">
+      <article class="promo stripe">
         <div class="container">
           <p>Вместе мы справимся!</p>
           <h1>Спецтех24 - это сеть пунктов аренды спецтехники Cat, оборудования и<br /> специализированных инструментов для выполнения большинства<br /> видов работ.</h1>
-          <a href="#">Перейти в каталог</a>
+          <a href="#" class="promo-button">Перейти в каталог</a>
         </div>
       </article>
       <section class="consult">
         <div class="container">
           <h2>Закажите бесплатную консультацию по подбору подходящей техники</h2>
           <form action="#">
-            <input type="text" name="name" placeholder="Как Вас зовут?" />
-            <input type="text" name="phone" placeholder="Номер для связи" />
-            <input type="text" name="date" placeholder="Выберите дату" />
-            <input class="button" type="submit" value="Заказать консультацию" />
+            <div class="row">
+              <div class="column">
+                <input type="text" name="name" placeholder="Как Вас зовут?" />
+              </div>
+              <div class="column">
+                <input type="text" name="phone" placeholder="Номер для связи" />
+              </div>
+              <div class="column">
+                <input type="text" name="date" placeholder="Выберите дату" />
+              </div>
+              <div class="column">
+                <input class="button button-consult" type="submit" value="Заказать консультацию" />
+              </div>
+              <div class="clearfix">
+            </div>
           </form>
         </div>
       </section>
@@ -54,7 +66,7 @@
           </ul>
         </div>
       </div>
-      <div class="deals">
+      <div class="deals stripe">
         <div class="container">
           <aside>
             <h2>Вся техника</h2>
@@ -106,7 +118,7 @@
           <div class="clearfix"></div>
         </div>
       </div>
-      <div class="about">
+      <div class="about stripe">
         <div class="container">
           <section class="number">
             <h2><b>Спецтех</b> в цифрах</h2>
