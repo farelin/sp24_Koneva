@@ -213,7 +213,6 @@ a {
 .features li {
   font-size: 13px;
   display: inline-block;
-  width: 24.5%;
   vertical-align: top;
   padding-left: 52px;
   box-sizing: border-box;
@@ -223,31 +222,37 @@ a {
 
 .features li:nth-child(1) {
   background-image: url('../images/tools.png');
-  padding-right: 15px;
+  padding-left: 60px;
+  width: 26%;
+  padding-right: 20px;
 }
 
 .features li:nth-child(2) {
   background-image: url('../images/worker.png');
-  padding-left: 55px;
+  padding-left: 65px;
+  width: 26%;
 }
 
 .features li:nth-child(3) {
   background-image: url('../images/fence.png');
+  padding-left: 60px;
+  width: 26%;
 }
 
 .features li:nth-child(4) {
   background-image: url('../images/workman.png');
-  padding-left: 40px;
-  padding-right: 15px;
+  padding-left: 50px;
+  width: 20%;
 }
 
 .deals {
   background-color: #f3f3f3;
-  padding: 30px 0;
+  padding-top: 45px;
+  padding-bottom: 55px;
   position: relative;
 }
 
-.deals aside {
+.deals aside, .catalog aside {
   float: left;
   width: 25%;
 }
@@ -257,17 +262,21 @@ a {
   width: 75%;
 }
 
-.deals h2, .contacts-reviews h2 {
+.deals aside h2, .deals section h2, .contacts-reviews h2, .catalog aside h2, .catalog-deals h2 {
   font-size: 26px;
   font-weight: bold;
 }
 
-.deals a{
+.deals aside a, .catalog .equipment a {
   font-size: 16px;
   text-decoration: underline;
 }
 
-.deals li {
+.deals aside a:hover, .catalog .equipment a:hover {
+  text-decoration: none;
+}
+
+.deals li, .catalog li {
   margin: 15px 0;
 }
 
@@ -300,7 +309,8 @@ a {
 
 .about {
   background-color: #202e3b;
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 60px;
   position: relative;
 }
 
@@ -657,16 +667,203 @@ a {
   padding-top: 10px;
 }
 
+.catalog {
+  background-color: #f3f3f3;
+  padding-top: 30px;
+}
+
 aside.equipment{
   float: left;
+  width: 240px;
+  margin-right: 100px;
 }
 
-.catalog {
-  float: right;
+aside.equipment h2 {
+  background-image: url('../images/car.png');
+  background-repeat: no-repeat;
+  background-position: 0 4px;
+  padding-left: 45px;
 }
 
-.catalog-list li {
+.catalog .equipment li.active a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.catalog .equipment li.active a:before {
+  content: '';
+  display: inline-block;
+  background-image: url('../images/arrow-icon-black.png');
+  background-size: 100%;
+  width: 7px;
+  height: 11px;
+  margin-right: 10px;
+}
+
+aside.equipment li:last-child {
+  margin-top: 30px;
+}
+
+aside.equipment .downloads {
+  background-color: #354b60;
+  color: #fff;
+  font-weight: normal;
+  font-size: 16px;
+  padding: 10px 25px 10px 45px;
+  background-image: url('../images/download-icon.png');
+  background-repeat: no-repeat;
+  background-position: 13px 10px;
+  text-decoration: none;
+}
+
+aside.equipment .downloads:hover {
+  background-color: #46617a;
+}
+
+aside.equipment .downloads:active {
+  background-color: #567999;
+}
+
+.catalog-list.row {
+  float: left;
+  width: 620px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.catalog-list .column, .catalog-deals .column {
+  float: left;
+  padding: 25px 30px 35px 30px;
+  box-sizing: border-box;
   width: 300px;
+  background-color: #fff;
+  margin-bottom: 20px;
 }
 
+.catalog-list .column img {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
 
+.catalog-list .column:nth-child(2n) {
+  margin-left: 20px;
+}
+
+.catalog-list .column h3, .catalog-deals .column h3 {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.catalog-list .column p, .catalog-deals .column p {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.catalog-list .column span, .catalog-deals .column span {
+  font-size: 27px;
+}
+
+.catalog-list .column .button-item, .catalog-deals .column .button-item {
+  display: table-row;
+}
+
+.catalog-list .column .rent, .catalog-list .column .read-more, .catalog-deals .column .rent, .catalog-deals .column .read-more {
+  padding: 8px 20px;
+  font-size: 16px;
+  display: table-cell;
+  color: #fff;
+  font-weight: normal;
+}
+
+.catalog-list .column .rent, .catalog-deals .column .rent {
+  background-color: #f3c331;
+}
+
+.catalog-list .column .rent:hover, .catalog-deals .column .rent:hover {
+  background-color: #ffd966;
+}
+
+.catalog-list .column .rent:active, .catalog-deals .column .rent:active {
+  background-color: #ffc600;
+}
+
+.catalog-list .column .read-more, .catalog-deals .column .read-more {
+  background-color: #354b60;
+}
+
+.catalog-list .column .read-more:hover, .catalog-deals .column .read-more:hover {
+  background-color: #46617a;
+}
+
+.catalog-list .column .read-more:active, .catalog-deals .column .read-more:active {
+  background-color: #567999;
+}
+
+.catalog .pagination {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.catalog .pagination li {
+  display: inline-block;
+  line-height: 1;
+}
+
+.catalog .pagination li a {
+  padding: 5px 9px 3px 9px;
+  display: block;
+  border: 2px solid transparent;
+}
+
+.catalog .pagination li a:hover {
+  border: 2px solid #9aa5af;
+}
+
+.catalog .pagination li a:active {
+  border: 2px solid #354b60;
+}
+
+.catalog .pagination li.active {
+  background-color: #354b60;
+}
+
+.catalog .pagination li.active a {
+  color: #fff;
+}
+
+.catalog-deals {
+  background-image: url('../images/catalog-deals.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 83%;
+}
+
+.catalog-deals h2 {
+  color: #fff;
+  padding-top: 45px;
+  padding-bottom: 25px;
+}
+
+.catalog-deals .row {
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-bottom: 50px;
+}
+
+.catalog-deals .column:nth-child(2) {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.catalog-deals .column p {
+  font-size: 18px;
+}
+
+.catalog-deals .column span {
+  font-size: 22px;
+}
+
+.catalog-deals .column span.sell {
+  color: #d12222;
+  text-decoration: line-through;
+}
