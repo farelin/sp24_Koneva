@@ -10,16 +10,16 @@
   <body>
     <header class="page-header stripe">
       <div class="container">
-        <a href="#" class="logo">
+        <a href="index.html" class="logo">
           <img src="images/logo.png" alt="logo" />
           <span><b>Спецтех</b>24</span>
         </a>
         <nav>
           <ul>
-            <li><a href="#">О компании</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Портфолио</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="index.html#about-company">О компании</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="portfolio.html">Портфолио</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
             <li><a href="#" class="nav-button">Заказать звонок</a></li>
           </ul>
         </nav>
@@ -31,7 +31,7 @@
         <div class="container">
           <p>Вместе мы справимся!</p>
           <h1>Спецтех24 - это сеть пунктов аренды спецтехники Cat, оборудования и<br /> специализированных инструментов для выполнения большинства<br /> видов работ.</h1>
-          <a href="#" class="promo-button">Перейти в каталог</a>
+          <a href="catalog.html" class="promo-button">Перейти в каталог</a>
         </div>
       </article>
       <section class="consult">
@@ -118,6 +118,7 @@
           <div class="clearfix"></div>
         </div>
       </div>
+      <a name="about-company"></a>
       <div class="about stripe">
         <div class="container">
           <section class="number">
@@ -149,39 +150,27 @@
           <div class="clearfix"></div>
         </div>
       </div>
-      <div id="map"></div>
+      <div id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31980.426249969136!2d30.355744099999995!3d59.9358484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1442920366908" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen="no"></iframe>
+      </div>
     </main>
     <footer class="page-footer page-header">
       <div class="container">
-        <a href="#" class="logo">
+        <a href="index.html" class="logo">
           <img src="images/logo-footer.png" alt="logo" />
           <span><b>Спецтех</b>24</span>
         </a>
       <nav>
         <ul>
-          <li><a href="#">О компании</a></li>
-          <li><a href="#">Каталог</a></li>
-          <li><a href="#">Портфолио</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li><a href="index.html#about-company">О компании</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
           <li><a href="#" class="nav-button">Заказать звонок</a></li>
         </ul>
       </nav>
       <div class="clearfix"></div>
       </div>
     </footer>
-    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <script type="text/javascript">
-        ymaps.ready(init);
-        var myMap;
-
-        function init() {
-            myMap = new ymaps.Map("map", {
-                center: [59.942926, 30.29942],
-                zoom: 11,
-                controls: ["zoomControl"]
-            });
-            myMap.behaviors.disable('scrollZoom');
-        }
-    </script>
   </body>
 </html>

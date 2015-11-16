@@ -97,7 +97,7 @@ a {
   bottom: 0;
   left: 0;
   background-image: linear-gradient(135deg, #ffcd34 35%, #000 35%, #000 65%, #ffcd34 65%);
-  background-size: 35px 14px;
+  background-size: 24px 14px;
 }
 
 .promo {
@@ -433,7 +433,24 @@ a {
 
 .portfolio-header li {
   display: inline-block;
-  margin-left: 40px;
+  margin-left: 25px;
+  text-align: center;
+}
+
+.portfolio-header li:nth-child(1) {
+  width: 85px;
+}
+
+.portfolio-header li:nth-child(2) {
+  width: 106px;
+}
+
+.portfolio-header li:nth-child(3) {
+  width: 76px;
+}
+
+.portfolio-header li:nth-child(4) {
+  width: 130px;
 }
 
 .portfolio-header a {
@@ -738,6 +755,8 @@ aside.equipment .downloads:active {
   width: 300px;
   background-color: #fff;
   margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
 }
 
 .catalog-list .column img {
@@ -866,4 +885,27 @@ aside.equipment .downloads:active {
 .catalog-deals .column span.sell {
   color: #d12222;
   text-decoration: line-through;
+}
+
+.badge:before {
+  display: block;
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  width: 100px;
+  padding: 5px;
+  transform: rotate(45deg);
+  right: -30px;
+  top: 10px;
+}
+
+.badge-green:before {
+  content: 'new';
+  background-color: #00c22e;
+}
+
+.badge-red:before {
+  content: 'sale';
+  background-color: #d12222;
 }
