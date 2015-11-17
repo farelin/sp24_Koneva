@@ -26,29 +26,29 @@ a {
   box-sizing: border-box;
 }
 
-.page-header {
+.page-header, .page-footer {
   background-color: #ffcd34;
   padding: 20px 0;
   position: relative;
 }
 
-.page-header a {
+.page-header a, .page-footer a{
   float: left;
   line-height: 1;
   padding-top: 4px;
 }
 
-.page-header img {
+.page-header img, .page-footer img {
   vertical-align: middle;
 }
 
-.page-header span {
+.page-header span, .page-footer span {
   vertical-align: middle;
   font-size: 24px;
   margin-left: 5px;
 }
 
-.page-header nav {
+.page-header nav, .page-footer nav {
   float: right;
 }
 
@@ -56,11 +56,11 @@ a {
   clear: both;
 }
 
-.page-header li {
+.page-header li, .page-footer li {
   display: inline-block;
 }
 
-.page-header li a {
+.page-header li a, .page-footer li a {
   font-size: 16px;
   display: block;
   padding: 12px 20px;
@@ -388,30 +388,22 @@ a {
 
 .page-footer li a {
   color: #fff;
-  border: 2px solid transparent;
 }
 
-.page-header li a:hover {
+.page-footer li a:hover {
   border: 2px solid #636d76;
-  background-color: transparent;
 }
 
-.page-header li a:active {
+.page-footer li a:active {
   border: 2px solid #a6abb1;
 }
 
 .page-footer .nav-button {
-  background-color: transparent;
   color: #ffcd34;
 }
 
 .page-footer .nav-button:hover {
-  background-color: transparent;
   border: 2px solid transparent;
-}
-
-.page-footer .nav-button:active {
-  background-color: transparent;
 }
 
 .portfolio-header {
