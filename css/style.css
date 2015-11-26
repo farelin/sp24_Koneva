@@ -842,6 +842,7 @@ aside.equipment .downloads:active {
 
 .catalog .pagination li.active a {
   color: #fff;
+  border: 2px solid transparent;
 }
 
 .catalog-deals {
